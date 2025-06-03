@@ -29,7 +29,7 @@ const About = () => {
 
   // Value Card
   const ValueCard = ({ icon, title, description }) => (
-    <Card3D className="h-full bg-blue-400 rounded-lg">
+    <Card3D className="h-full rounded-lg">
       <div className="text-center">
         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 transform group-hover:rotate-12 transition-all duration-500">
           {icon}

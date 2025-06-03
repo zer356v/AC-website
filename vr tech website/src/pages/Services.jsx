@@ -97,8 +97,8 @@ const Services = () => {
       ]
     },
     {
-      title: 'AC Disinstallation',
-      description: 'Safe and professional AC removal service with damage-free handling and system preservation.',
+      title: ' AMC Service',
+      description: 'Hassle-free, scheduled air conditioning maintenance to keep your system running smoothly all year.',
       price: 'From ₹3500',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,10 +107,12 @@ const Services = () => {
       ),
       image:(assets.image3),
       features: [
-        'Secure dismounting of indoor & outdoor units',
-        'Gas recovery to prevent leakage',
-        'Cleanup of wiring and piping',
-        'Optional packing for relocation',
+        '2–4 scheduled services per year',
+        'Filter and coil cleaning',
+        'Electrical and component inspection',
+        'Refrigerant (gas) level check',
+        'Priority support with faster response',
+        'Ideal For Homes, Offices,Commercial '
       ]
     },
     {
@@ -269,7 +271,7 @@ const Services = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card3D className='bg-blue-400 rounded-lg'>
+            <Card3D className=' rounded-lg'>
               <div className="text-center ">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -281,7 +283,7 @@ const Services = () => {
               </div>
             </Card3D>
             
-            <Card3D className='bg-blue-400 rounded-lg'>
+            <Card3D className=' rounded-lg'>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -293,7 +295,7 @@ const Services = () => {
               </div>
             </Card3D>
             
-            <Card3D className='bg-blue-400 rounded-lg'>
+            <Card3D className=' rounded-lg'>
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
