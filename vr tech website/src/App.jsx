@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import { Route, Router, Routes } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Footer from './components/Footer'
-import Services from './pages/Services'
 import ScrollToTop from './components/ScroolToTop'
+
+// Lazy load less-frequent pages
+const Navbar = lazy(() => import('./components/Navbar'));
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+const Services = lazy(() => import('./pages/Services'));
+
+
+// Optional preload functions (can trigger on hover)
+Navbar.preload = () => import('./components/Navbar');
+Home.preload = () => import('./pages/Home');
+About.preload = () => import('./pages/About');
+Contact.preload = () => import('./pages/Contact');
+Footer.preload = () => import('./components/Footer');
+Services.preload = () => import('./pages/Services');
+
 
 const App = () => {
   return (

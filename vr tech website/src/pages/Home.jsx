@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { assets } from '../assets/Assets';
+import WhatsappContact from '../components/WhatsappContact'
 
 const Home = () => {
   // 3D Card Component
@@ -227,6 +228,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <WhatsappContact/>
     </div>
   );
 };
