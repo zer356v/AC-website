@@ -15,20 +15,20 @@ const Home = () => {
 
   // Hero Card Component
   const HeroCard = ({ icon, title, description }) => (
-    <Card3D className="h-full">
+    <Card3D className="h-full bg-blue-400 rounded-lg">
       <div className="text-center">
-        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 transform group-hover:rotate-12 transition-all duration-500">
+        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-300 transform group-hover:rotate-12 transition-all duration-500">
           {icon}
         </div>
         <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-        <p className="text-slate-400">{description}</p>
+        <p className="text-white">{description}</p>
       </div>
     </Card3D>
   );
 
   // Testimonial Card Component
   const TestimonialCard = ({ name, role, content, rating = 5 }) => (
-    <Card3D className="h-full">
+    <Card3D className="h-full bg-blue-400 rounded-lg">
       <div className="flex items-center mb-4">
         <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-blue-500/30">
           <span className="text-white font-bold">{name.charAt(0)}</span>
@@ -106,18 +106,28 @@ const Home = () => {
       <section className="relative pt-20 min-h-screen flex items-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900"></div>
-          <img className='w-full' src={assets.cooling_bac} alt="" />
-        </div>
+        {/* Gradient background (always visible) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900"></div>
+
+        {/* Image visible on sm and above, hidden on mobile */}
+        <img
+          className="hidden sm:block w-full sm:w-80 md:w-full"
+          src={assets.cooling_bac}
+          alt=""
+        />
+        {/* White background for mobile (only visible on screens < sm) */}
+        <div className="block sm:hidden absolute inset-0 bg-white"></div>
+      </div>
+
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 py-20">
           <div className="flex flex-col lg:flex-row items-center">
-            <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+            <div className="lg:w-1/2 ml-2 sm:ml-8 text-center lg:text-left mb-10 lg:mb-0">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
                  Your Comfort <br />
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Our Priority
-                </span>
+                </span> 
               </h1>
               <p className="text-xl text-slate-300 mb-8 max-w-lg">
               Delivering Reliable and Affordable AC Installation, Repair & Maintenance Services for Homes and Businesses              </p>
@@ -151,11 +161,11 @@ const Home = () => {
       </section>
       
       {/* Features Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Why Choose VR Tech ?</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+            <h2 className="text-3xl md:text-5xl font-bold text-blue-500 mb-4">Why Choose VR Tech ?</h2>
+            <p className="text-blue-800 max-w-2xl mx-auto text-lg">
             From initial consultation and installation to annual servicing and emergency repairs, we provide end-to-end AC solutions tailored to your needs.
             </p>
           </div>
@@ -174,14 +184,14 @@ const Home = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-slate-950/30"></div>
+      <section className="py-20 bg-gradient-to-r from-blue-200 to-cyan-200 relative overflow-hidden">
+        <div className="absolute inset-0 bg-white "></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <Card3D className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to connect with us ?
             </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
               Join thousands of satisfied customers who've upgraded to proper service management.
             </p>
             <Link 
@@ -195,11 +205,11 @@ const Home = () => {
       </section>
       
       {/* Testimonials Section */}
-      <section className="py-20 bg-slate-900/30">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+            <h2 className="text-3xl md:text-5xl font-bold text-blue-500 mb-4">What Our Clients Say</h2>
+            <p className="text-blue-800 max-w-2xl mx-auto text-lg">
               Real experiences from real customers who trust CoolAir for their climate control needs.
             </p>
           </div>

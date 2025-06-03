@@ -29,13 +29,13 @@ const About = () => {
 
   // Value Card
   const ValueCard = ({ icon, title, description }) => (
-    <Card3D className="h-full">
+    <Card3D className="h-full bg-blue-400 rounded-lg">
       <div className="text-center">
         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 transform group-hover:rotate-12 transition-all duration-500">
           {icon}
         </div>
         <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-        <p className="text-slate-400">{description}</p>
+        <p className="text-white">{description}</p>
       </div>
     </Card3D>
   );
@@ -109,38 +109,36 @@ const About = () => {
   return (
     <div className="min-h-screen bg-slate-950 pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900"></div>
-          {[...Array(15)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute bg-blue-400/10 rounded-full animate-pulse"
-              style={{
-                width: `${Math.random() * 6 + 3}px`,
-                height: `${Math.random() * 6 + 3}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`
-              }}
-            ></div>
-          ))}
+      <section className="relative py-20 min-h-[50vh] flex items-center">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0  bg-cover bg-center opacity-70">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover">
+            <source src={assets.bac_video}  type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          </div>
         </div>
         
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">VR Tech </span>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-3xl">
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              VR TECH HVAC <span className="text-blue-400">Solutions</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            We delivers reliable AC installation, repair, and maintenance services with a focus on modern technology, energy efficiency, and customer satisfaction.
+            <p className="text-xl text-gray-300">
+              State-of-the-art audio visual solutions for business, education, and entertainment
             </p>
           </div>
         </div>
       </section>
       
       {/* Story Section */}
-      <section className="py-20 bg-slate-900/30">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
@@ -153,8 +151,8 @@ const About = () => {
               </Card3D>
             </div>
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Story</h2>
-              <div className="space-y-4 text-slate-300">
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-500 mb-6">Our Story</h2>
+              <div className="space-y-4 text-blue-800">
                 <p>
                 VR Tech was founded in 2024 with a mission to provide reliable, efficient, and affordable air conditioning services to homes and businesses.
                 From the start, our goal has been to ensure every client enjoys cool, comfortable environments
@@ -175,18 +173,18 @@ const About = () => {
       </section>
       
       {/* Mission & Vision */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Mission & Vision</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-500 mb-4">Mission & Vision</h2>
+            <p className="text-blue-800 max-w-2xl mx-auto">
               Our guiding principles that drive innovation and excellence in everything we do.
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card3D className="h-full">
-              <div className="text-center">
+            <Card3D className="h-full bg-blue-400 rounded-lg">
+              <div className="text-center ">
                 <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -200,7 +198,7 @@ const About = () => {
               </div>
             </Card3D>
             
-            <Card3D className="h-full">
+            <Card3D className="h-full bg-blue-400 rounded-lg">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -222,18 +220,18 @@ const About = () => {
      
       
       {/* Values Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-500 mb-4">Our Core Values</h2>
+            <p className="text-blue-800 max-w-2xl mx-auto">
               The fundamental principles that guide our decisions and shape our company culture.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <ValueCard
+              <ValueCard 
                 key={index}
                 icon={value.icon}
                 title={value.title}
@@ -245,10 +243,10 @@ const About = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-slate-950/30"></div>
+      <section className="py-20 bg-gradient-to-r from-blue-300/50 to-cyan-900/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-white"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <Card3D className="max-w-4xl mx-auto text-center">
+          <Card3D className="max-w-4xl mx-auto text-center bg-blue-400 rounded-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Experience the Service?
             </h2>

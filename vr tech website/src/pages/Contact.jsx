@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'sonner';
+import { assets } from '../assets/Assets';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ const Contact = () => {
 
   // Contact Info Card
   const ContactCard = ({ icon, title, info, link }) => (
-    <Card3D>
+    <Card3D className='bg-blue-400 rounded-lg'>
       <div className="text-center">
         <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 transform group-hover:rotate-12 transition-all duration-500">
           {icon}
@@ -35,7 +36,7 @@ const Contact = () => {
             {info}
           </a>
         ) : (
-          <p className="text-slate-400">{info}</p>
+          <p className="text-white">{info}</p>
         )}
       </div>
     </Card3D>
@@ -156,38 +157,36 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-slate-950 pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900"></div>
-          {[...Array(15)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute bg-blue-400/10 rounded-full animate-pulse"
-              style={{
-                width: `${Math.random() * 6 + 3}px`,
-                height: `${Math.random() * 6 + 3}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`
-              }}
-            ></div>
-          ))}
+      <section className="relative py-20 min-h-[50vh] flex items-center">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0  bg-cover bg-center opacity-70">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover">
+            <source src={assets.bac_video3}  type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          </div>
         </div>
         
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Get In <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-3xl">
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              VR TECH HVAC <span className="text-blue-400">Solutions</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Ready to experience the future of climate control? Contact our experts for a free consultation and quote.
+            <p className="text-xl text-gray-300">
+              State-of-the-art audio visual solutions for business, education, and entertainment
             </p>
           </div>
         </div>
       </section>
       
       {/* Contact Info Cards */}
-      <section className="py-20 bg-slate-900/30">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
@@ -204,24 +203,24 @@ const Contact = () => {
       </section>
       
       {/* Contact Form Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Send Us a Message</h2>
-              <p className="text-slate-300 mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-500 mb-6">Send Us a Message</h2>
+              <p className="text-blue-800 mb-8">
                 Fill out the form below and one of our climate control experts will get back to you within 24 hours.
               </p>
               
-              <Card3D>
+              <Card3D className='bg-blue-400 rounded-lg'>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                       Full Name*
                     </label>
                     <input
                       type="text"
-                      id="name"
+                      id="name" 
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
@@ -235,7 +234,7 @@ const Contact = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                         Email Address*
                       </label>
                       <input
@@ -253,7 +252,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
                         Phone Number*
                       </label>
                       <input
@@ -272,7 +271,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
                       Service Needed
                     </label>
                     <select
@@ -291,7 +290,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                       Message*
                     </label>
                     <textarea
@@ -334,9 +333,9 @@ const Contact = () => {
             </div>
             
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose Vr Tech?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-500  mb-6">Why Choose Vr Tech?</h2>
               <div className="space-y-6">
-                <Card3D>
+                <Card3D className='bg-blue-400 rounded-lg'>
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 shadow-lg shadow-blue-500/30 flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -345,12 +344,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">Fast Response</h3>
-                      <p className="text-slate-400">We respond to all inquiries within 24 hours and offer same-day emergency service.</p>
+                      <p className="text-white">We respond to all inquiries within 24 hours and offer same-day emergency service.</p>
                     </div>
                   </div>
                 </Card3D>
                 
-                <Card3D>
+                <Card3D className='bg-blue-400 rounded-lg'>
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 shadow-lg shadow-blue-500/30 flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -359,12 +358,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">Expert Team</h3>
-                      <p className="text-slate-400">Our certified technicians have years of experience with the latest smart HVAC technology.</p>
+                      <p className="text-white">Our certified technicians have years of experience with the latest smart HVAC technology.</p>
                     </div>
                   </div>
                 </Card3D>
                 
-                <Card3D>
+                <Card3D className='bg-blue-400 rounded-lg'>
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 shadow-lg shadow-blue-500/30 flex-shrink-0">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -373,7 +372,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">Free Consultation</h3>
-                      <p className="text-slate-400">Get a comprehensive assessment of your climate control needs at no cost.</p>
+                      <p className="text-white">Get a comprehensive assessment of your climate control needs at no cost.</p>
                     </div>
                   </div>
                 </Card3D>
@@ -385,9 +384,9 @@ const Contact = () => {
       
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-slate-950/30"></div>
+        <div className="absolute inset-0 bg-white"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <Card3D className="max-w-4xl mx-auto text-center">
+          <Card3D className="max-w-4xl mx-auto text-center bg-blue-400 rounded-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
