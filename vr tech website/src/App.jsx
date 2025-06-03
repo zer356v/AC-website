@@ -1,6 +1,7 @@
 import React, { lazy } from 'react'
 import { Route, Router, Routes } from 'react-router-dom'
 import ScrollToTop from './components/ScroolToTop'
+import WhatsAppContact from './components/WhatsappContact';
 
 // Lazy load less-frequent pages
 const Navbar = lazy(() => import('./components/Navbar'));
@@ -32,6 +33,7 @@ const App = () => {
         <Route path='/services' element={<Services/>}/>
       </Routes>
       <Footer/>
+      <WhatsAppContact/>
     </div>
   )
 }

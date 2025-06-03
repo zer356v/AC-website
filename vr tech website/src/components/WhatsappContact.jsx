@@ -3,7 +3,7 @@ import { MessageCircle, X } from 'lucide-react';
 
 const WhatsAppContact = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = "+971504850541"; // Replace with actual WhatsApp phone number
+  const phoneNumber = "+919790811296"; // Replace with actual WhatsApp phone number
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
   
   return (
