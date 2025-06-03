@@ -107,21 +107,7 @@ const Home = () => {
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900"></div>
-          {/* Floating Elements */}
-          {[...Array(20)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute bg-blue-400/10 rounded-full animate-pulse"
-              style={{
-                width: `${Math.random() * 8 + 4}px`,
-                height: `${Math.random() * 8 + 4}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${Math.random() * 3 + 2}s`
-              }}
-            ></div>
-          ))}
+          <img className='w-full' src={assets.cooling_bac} alt="" />
         </div>
         
         <div className="container mx-auto px-4 md:px-6 relative z-10 py-20">
