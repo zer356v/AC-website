@@ -50,7 +50,7 @@ app.use(bodyParser.json());
 //
 
 // Serve static frontend files
-const frontendPath = path.join(__dirname, "frontend/dist");
+const frontendPath = path.join(__dirname, "..", "frontend", "dist");
 app.use(express.static(frontendPath));
 
 // Redirect all requests to index.html (important for React Router!)
