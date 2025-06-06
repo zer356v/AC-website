@@ -2,12 +2,12 @@ import React, { lazy } from 'react'
 import { Route, Router, Routes } from 'react-router-dom'
 import ScrollToTop from './components/ScroolToTop'
 import WhatsAppContact from './components/WhatsappContact';
+import Contact from './pages/Contact';
 
 // Lazy load less-frequent pages
 const Navbar = lazy(() => import('./components/Navbar'));
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 const Services = lazy(() => import('./pages/Services'));
 
@@ -16,7 +16,7 @@ const Services = lazy(() => import('./pages/Services'));
 Navbar.preload = () => import('./components/Navbar');
 Home.preload = () => import('./pages/Home');
 About.preload = () => import('./pages/About');
-Contact.preload = () => import('./pages/Contact');
+
 Footer.preload = () => import('./components/Footer');
 Services.preload = () => import('./pages/Services');
 

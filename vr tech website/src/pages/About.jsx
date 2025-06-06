@@ -208,8 +208,8 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                 <p className="text-slate-300">
-                To be a trusted global leader in smart and sustainable climate solutions,
-                 ensuring perfect indoor comfort for every home and business with integrity and excellence.
+                To be the most trusted provider of exceptional customer service, creating perfect
+                 indoor comfort for every home and business through unwavering integrity and excellence.
                 </p>
               </div>
             </Card3D>
