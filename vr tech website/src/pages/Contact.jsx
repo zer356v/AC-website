@@ -45,7 +45,7 @@ const Contact = () => {
       const data = await response.json();
       console.log("Success:", data);
   
-      setFormData({ name: "", email: "", phone: "", message: "" }); // Reset form
+      setFormData({ name: "", email: "", phone: "", message: "", subject: "" }); // Reset form
       setFormStatus('success'); // Show success status
     } catch (error) {
       console.error("Error sending email:", error);
@@ -59,10 +59,6 @@ const Contact = () => {
   };
   
 
-  useEffect (() => {
-    console.log(formData)
-  },[formData])
-  
 
   // 3D Card Component
   const Card3D = ({ children, className = "" }) => (
