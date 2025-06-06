@@ -124,7 +124,7 @@ const Home = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10 py-20">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 ml-2 sm:ml-8 text-center lg:text-left mb-10 lg:mb-0">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-blue-400 leading-tight mb-6 -mt-16">
                  Your Comfort <br />
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Our Priority

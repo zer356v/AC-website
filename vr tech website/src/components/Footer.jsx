@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { assets } from '../assets/Assets';
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -14,20 +17,29 @@ const Footer = () => {
             <p className="text-slate-400 mb-6">
               Advanced air conditioning solutions with cutting-edge technology for maximum comfort and efficiency.
             </p>
-            <div className="flex space-x-4">
-              {['facebook', 'instagram', 'twitter'].map((social) => (
+            <div className='flex gap-4'>
+              <div >
                 <a 
-                  key={social}
                   href="#" 
                   className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-blue-400 hover:bg-slate-700 transition-all duration-300 border border-slate-700 hover:border-blue-500/50"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                  </svg>
+                  <FaInstagram />
                 </a>
-              ))}
+              
+            </div>
+            <div>
+            
+                <a 
+                  href="#" 
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-blue-400 hover:bg-slate-700 transition-all duration-300 border border-slate-700 hover:border-blue-500/50"
+                >
+                  <FaFacebook />
+                </a>
+              
             </div>
           </div>
+            </div>
+            
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h3>
@@ -101,7 +113,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-700 mt-12 pt-8 text-center text-slate-400">
-          <p>&copy; {new Date().getFullYear()} Vr tech havc Solutions. All rights reserved. <span>* Terms & conditions</span></p>
+          <p>&copy; {new Date().getFullYear()} Vr tech havc Solutions. All rights reserved <span>* Terms & conditions</span></p>
         </div>
       </div>
     </footer>
